@@ -353,7 +353,15 @@ export default function Component() {
 
   if (!gameStarted) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-900 to-blue-900 text-white p-4">
+<div
+  className="flex flex-col items-center justify-center min-h-screen text-white p-4"
+  style={{
+    backgroundImage: "url('/room2.png')",  
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+  }}
+>
         <Card className="w-full max-w-md bg-black/20 border-white/20 text-white">
           <CardHeader className="text-center">
             <CardTitle className="text-3xl font-bold">🔐 Escape Room</CardTitle>
@@ -378,12 +386,8 @@ export default function Component() {
   if (gameWon) {
     return (
 <div
-  className="flex flex-col items-center justify-center min-h-screen text-white p-4"
-  style={{
-    backgroundImage: "url('/room1.png')", // Change to your actual image filename
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  }}
+  className="flex flex-col items-center justify-center min-h-screen text-white p-4 bg-blend-color-burn bg-gradient-to-br from-green-500 to-blue-500"
+  
 >
         <Card className="w-full max-w-md bg-black/20 border-white/20 text-white text-center">
           <CardHeader>
@@ -403,7 +407,7 @@ export default function Component() {
 
   if (gameLost) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-900 to-orange-900 text-white p-4">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-red-500 to-orange-500 text-white p-4">
         <Card className="w-full max-w-md bg-black/20 border-white/20 text-white text-center">
           <CardHeader>
             <CardTitle className="text-3xl font-bold">⏰ Time's Up!</CardTitle>
@@ -420,8 +424,9 @@ export default function Component() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-900 to-purple-900 text-white p-4">
-      <div className="max-w-4xl mx-auto">
+<div
+  className="min-h-screen p-4 text-white bg-blend-color-dodge bg-gradient-to-br from-gray-800 to-gray-900" 
+>      <div className="max-w-4xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6">
           <div>
